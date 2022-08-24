@@ -1,0 +1,32 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>JS - Tag - Milo&#39;s Blog</title>
+        <link>https://wcmsues.github.io/tags/js/</link>
+        <description>JS - Tag - Milo&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wcmsues@163.com (Milo)</managingEditor>
+            <webMaster>wcmsues@163.com (Milo)</webMaster><lastBuildDate>Sun, 05 Jun 2022 13:45:43 &#43;0800</lastBuildDate><atom:link href="https://wcmsues.github.io/tags/js/" rel="self" type="application/rss+xml" /><item>
+    <title>Javascript中的高阶函数</title>
+    <link>https://wcmsues.github.io/javascript%E4%B8%AD%E7%9A%84%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0/</link>
+    <pubDate>Sun, 05 Jun 2022 13:45:43 &#43;0800</pubDate>
+    <author>Milo</author>
+    <guid>https://wcmsues.github.io/javascript%E4%B8%AD%E7%9A%84%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0/</guid>
+    <description><![CDATA[高阶函数是指以函数作为参数的函数，并且可以将函数作为结果返回的函数。 1. 高阶函数 接受一个或多个函数作为输入 输出一个函数 至少满足以上一个条件的函]]></description>
+</item>
+<item>
+    <title>JS从入门到精通</title>
+    <link>https://wcmsues.github.io/js%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/</link>
+    <pubDate>Fri, 03 Jun 2022 16:38:43 &#43;0800</pubDate>
+    <author>Milo</author>
+    <guid>https://wcmsues.github.io/js%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/</guid>
+    <description><![CDATA[介绍 此项目为Milo在学习JS的过程中记录的笔记和源码，视频看的是B站上硅谷李立超老师的JavaScript基础，笔记参考了vectorX大]]></description>
+</item>
+<item>
+    <title>前端学习计划</title>
+    <link>https://wcmsues.github.io/frontend/</link>
+    <pubDate>Sun, 01 May 2022 09:48:43 &#43;0800</pubDate>
+    <author>Milo</author>
+    <guid>https://wcmsues.github.io/frontend/</guid>
+    <description><![CDATA[1 HTML、CSS（尚硅谷超哥） 视频链接：尚硅谷Web前端零基础入门HTML5+CSS3基础教程丨初学者从入门到精通 2 JavaScript（]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Ajax - Tag - Milo&#39;s Blog</title>
+        <link>https://wcmsues.github.io/tags/ajax/</link>
+        <description>Ajax - Tag - Milo&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wcmsues@163.com (Milo)</managingEditor>
+            <webMaster>wcmsues@163.com (Milo)</webMaster><lastBuildDate>Sun, 01 May 2022 09:48:43 &#43;0800</lastBuildDate><atom:link href="https://wcmsues.github.io/tags/ajax/" rel="self" type="application/rss+xml" /><item>
+    <title>前端学习计划</title>
+    <link>https://wcmsues.github.io/frontend/</link>
+    <pubDate>Sun, 01 May 2022 09:48:43 &#43;0800</pubDate>
+    <author>Milo</author>
+    <guid>https://wcmsues.github.io/frontend/</guid>
+    <description><![CDATA[1 HTML、CSS（尚硅谷超哥） 视频链接：尚硅谷Web前端零基础入门HTML5+CSS3基础教程丨初学者从入门到精通 2 JavaScript（]]></description>
+</item>
+</channel>
+</rss>

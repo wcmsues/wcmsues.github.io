@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>解决一台电脑实现多个Github账号发布博客 - Milo&#39;s Blog</title><meta name="Description" content="解决一台电脑实现多个Github账号发布博客"><meta property="og:title" content="解决一台电脑实现多个Github账号发布博客" />
+<meta property="og:description" content="解决一台电脑实现多个Github账号发布博客" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wcmsues.github.io/mac%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7%E5%8F%91%E5%B8%83%E5%A4%9A%E4%B8%AA%E5%8D%9A%E5%AE%A2/" /><meta property="og:image" content="https://wcmsues.github.io/47"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-10T10:48:43+08:00" />
+<meta property="article:modified_time" content="2022-06-10T10:48:43+08:00" /><meta property="og:site_name" content="Milo&#39;s Blog" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://wcmsues.github.io/47"/>
+
+<meta name="twitter:title" content="解决一台电脑实现多个Github账号发布博客"/>
+<meta name="twitter:description" content="解决一台电脑实现多个Github账号发布博客"/>
+<meta name="application-name" content="Milo&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Milo&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/aniya.webp"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://wcmsues.github.io/mac%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7%E5%8F%91%E5%B8%83%E5%A4%9A%E4%B8%AA%E5%8D%9A%E5%AE%A2/" /><link rel="prev" href="https://wcmsues.github.io/npm%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" /><link rel="next" href="https://wcmsues.github.io/react%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "解决一台电脑实现多个Github账号发布博客",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/wcmsues.github.io\/mac%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7%E5%8F%91%E5%B8%83%E5%A4%9A%E4%B8%AA%E5%8D%9A%E5%AE%A2\/"
+        },"genre": "posts","keywords": "Github Pages, Git, Hugo, Vuepress, 博客","wordcount":  2425 ,
+        "url": "https:\/\/wcmsues.github.io\/mac%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7%E5%8F%91%E5%B8%83%E5%A4%9A%E4%B8%AA%E5%8D%9A%E5%AE%A2\/","datePublished": "2022-06-10T10:48:43+08:00","dateModified": "2022-06-10T10:48:43+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Milo"
+            },"description": "解决一台电脑实现多个Github账号发布博客"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <a href="https://github.com/wcmsues" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="3.5rem" height="3.5rem" viewBox="0 0 250 250" style="fill:#454648; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+        <div class="header-title">
+            <a href="/" title="Milo&#39;s Blog"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Milo&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="https://miloreact.github.io/" rel="noopener noreffer" target="_blank"> 前端开发 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/wcmsues" rel="noopener noreffer" target="_blank"><i class='fab fa-github'></i>  </a><a class="menu-item" href="/donate/"> 赞赏 </a><a class="menu-item" href="/friends/"><i class='fas fa-fw fa-fan fa-spin'></i> 友链 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Milo&#39;s Blog"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Milo&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="https://miloreact.github.io/" title="" rel="noopener noreffer" target="_blank">前端开发</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/wcmsues" title="" rel="noopener noreffer" target="_blank"><i class='fab fa-github'></i></a><a class="menu-item" href="/donate/" title="">赞赏</a><a class="menu-item" href="/friends/" title=""><i class='fas fa-fw fa-fan fa-spin'></i>友链</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">解决一台电脑实现多个Github账号发布博客</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Milo</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>技术</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-06-10">2022-06-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2425 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;<span id="/mac%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7%E5%8F%91%E5%B8%83%E5%A4%9A%E4%B8%AA%E5%8D%9A%E5%AE%A2/" class="leancloud_visitors" data-flag-title="解决一台电脑实现多个Github账号发布博客">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#解决一台电脑实现多个github账号发布博客">解决一台电脑实现多个Github账号发布博客</a></li>
+    <li><a href="#hugovuepress--github-pages">Hugo/Vuepress + Github Pages</a>
+      <ul>
+        <li><a href="#关于github-pages">关于Github Pages</a></li>
+        <li><a href="#关于hugo">关于Hugo</a></li>
+        <li><a href="#关于vuepress">关于Vuepress</a></li>
+        <li><a href="#我的环境">我的环境</a></li>
+      </ul>
+    </li>
+    <li><a href="#解决思路">解决思路</a>
+      <ul>
+        <li><a href="#1-密钥git配置">1 密钥/Git配置</a></li>
+        <li><a href="#2-hugo和vuepress设置">2 Hugo和Vuepress设置</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="解决一台电脑实现多个github账号发布博客">解决一台电脑实现多个Github账号发布博客</h2>
+<p>Milo之前在自己的GitHub Pages 搭建 Hugo 静态博客网站，Hugo写博客挺好，但是放一些比较多的学习笔记、文档什么的很麻烦，接触到vuepress，非常适合做我的在线文档和笔记记录的地方。</p>
+<p>于是Milo想再申请一个账号搭建一个新的vuepress博客，我想在同一台mac上完成两个博客的更新，但因为每次都要重新删github在mac上存留的密码，十分麻烦，所以今天一次性解决它，顺便记录下来分享给大家。</p>
+<h2 id="hugovuepress--github-pages">Hugo/Vuepress + Github Pages</h2>
+<p>相信很多同学都用Hugo/Vuepress + Github Pages搭建个人博客，其实用什么都行，Hexo、Halo等</p>
+<h3 id="关于github-pages">关于Github Pages</h3>
+<p>GitHub Pages 是由 GitHub 官方提供的一种免费的静态站点托管服务，可以在 GitHub 仓库里托管和发布自己的静态网站页面；Hexo 是一个快速、简洁且高效的静态博客框架，它基于 Node.js 运行，可以将我们撰写的 Markdown 文档解析渲染成静态的 HTML 网页</p>
+<h3 id="关于hugo">关于Hugo</h3>
+<p>Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。</p>
+<p>我选择hugo写博客，主要原因是因为它快！</p>
+<h3 id="关于vuepress">关于Vuepress</h3>
+<p>VuePress 需要nodejs，非常适合书写技术文档</p>
+<h3 id="我的环境">我的环境</h3>
+<ul>
+<li>
+<p>操作系统：macOS Catalina 版本10.15.4</p>
+</li>
+<li>
+<p>我的Hugo博客：<a href="https://wcmsues.github.io/" target="_blank" rel="noopener noreffer ">hugo博客</a></p>
+</li>
+<li>
+<p>我的Vuepress博客：<a href="https://miloreact.github.io/" target="_blank" rel="noopener noreffer ">vuepress博客</a></p>
+</li>
+</ul>
+<h2 id="解决思路">解决思路</h2>
+<p>思路就是：管理两个SSH key</p>
+<h3 id="1-密钥git配置">1 密钥/Git配置</h3>
+<h4 id="11-创建新的密钥">1.1 创建新的密钥</h4>
+<p><strong>先查看当前已有的密钥 [老密钥]</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">ls ~/.ssh/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>显示<code>id_rsa</code> 与<code> id_rsa.pub</code>说明已经有一对密钥</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">milo@MilodeMacBook-Pro ~ %ls ~/.ssh/
+</span></span><span class="line"><span class="cl">config       id_rsa       id_rsa.pub
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>⚠️注意：如果没有 <strong>[老密钥]</strong>，就生成两个**[新密钥]**即可，一个叫<code>id_rsa</code>，另一个叫<code>id_rsa_c</code></p>
+<p><strong>生成新的密钥 [新密钥]</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">cd</span> ~/.ssh/
+</span></span><span class="line"><span class="cl">ssh-keygen -t rsa -C <span class="s2">&#34;你的邮箱xxx@xx.com&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>⚠️注意：当出现下面这一句时，需要给新的密钥起名字，比如：<code>id_rsa_c</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">Generating public/private rsa key pair. Enter file in which to save the key <span class="o">(</span>/c/Users/you/.ssh/id_rsa<span class="o">)</span>: id_rsa_c
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后不用填写，一路回车就行</p>
+<p><strong>验证密钥是否生成</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">ls ~/.ssh/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>显示<code>id_rsa</code>、<code>id_rsa.pub</code>与<code>id_rsa_c</code>、<code>id_rsa_c.pub</code>说明已经有两对密钥</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">milo@MilodeMacBook-Pro ~ %ls ~/.ssh/
+</span></span><span class="line"><span class="cl">config       id_rsa       id_rsa.pub      id_rsa_c       id_rsa_c.pub
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="12-配置两个密钥">1.2 配置两个密钥</h4>
+<p>查看<code>.ssh/</code>根路径下, 有没有<code>config</code>文件,没有则<strong>创建</strong>一个<code>config</code>文件(<code>config</code>本身无后缀名)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">touch config
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>用Text打开config</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">open -a TextEdit config
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>写入如下配置</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#第一个账号，默认使用的账号，不用做任何更改
+</span></span><span class="line"><span class="cl">Host github.com
+</span></span><span class="line"><span class="cl">    HostName github.com
+</span></span><span class="line"><span class="cl">    User git
+</span></span><span class="line"><span class="cl">    IdentityFile ~/.ssh/id_rsa
+</span></span><span class="line"><span class="cl">#第二个新账号，#&#34;xxxxx&#34;为前缀名，可以任意设置，要记住，后面需要用到
+</span></span><span class="line"><span class="cl">Host xxxxx.github.com
+</span></span><span class="line"><span class="cl">    HostName github.com
+</span></span><span class="line"><span class="cl">    User git
+</span></span><span class="line"><span class="cl">    IdentityFile ~/.ssh/这里是你创建的新密钥的名称
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>例如</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Host github.com
+</span></span><span class="line"><span class="cl">    HostName github.com
+</span></span><span class="line"><span class="cl">    User git
+</span></span><span class="line"><span class="cl">    IdentityFile ~/.ssh/id_rsa
+</span></span><span class="line"><span class="cl">Host vue.github.com
+</span></span><span class="line"><span class="cl">    HostName github.com
+</span></span><span class="line"><span class="cl">    User git
+</span></span><span class="line"><span class="cl">    IdentityFile ~/.ssh/id_rsa_c
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="13-添加到ssh-agent">1.3 添加到SSH agent</h4>
+<p><strong>先清空本地的 SSH 缓存</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">ssh-add -D
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>添加新的 SSH 密钥 到 SSH agent中</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">ssh-add xxxxxx <span class="c1">#旧密钥名称，一般是id_rsa</span>
+</span></span><span class="line"><span class="cl">ssh-add xxxxxx <span class="c1">#新创建的密钥名称</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>例如</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">ssh-add id_rsa
+</span></span><span class="line"><span class="cl">ssh-add id_rsa_c
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>⚠️注意：如果出现错<code>Could not open a connection to your authentication agent.</code>，先执行<code>ssh-agent bash</code>，再执行以上命令，虽然我没遇到这个错误😄</p>
+<h4 id="14-新的ssh-github">1.4 新的SSH-GitHub</h4>
+<p>之前我们生成新密钥的时候执行了<code>cd ~/.ssh/</code>，所以我们当前应该在<code>.ssh</code>目录下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">milo@MilodeMacBook-Pro ~/.ssh %
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在<code>.ssh</code>目录下找到创建的新的公钥<code>id_rsa_c.pub</code>，<strong>用Text打开它</strong>，并把里面的<strong>内容复制</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">open -a TextEdit id_rsa_c.pub
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>打开新GitHub账号主页 Settings —&gt; SSH and GPG keys —&gt; 点击New SSH key</p>
+<p>title可以随便填，将刚复制的内容<strong>粘贴到Key</strong>那里，点击Add Key保存即可</p>
+<p>然后回到命令行<strong>验证</strong>一下是不是设置好了</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">ssh -T git@github.com <span class="c1">#老密钥的ssh_key验证</span>
+</span></span><span class="line"><span class="cl">ssh -T git@xxxxxxx.github.com <span class="c1">#新密钥的ssh_key验证</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>例如</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">ssh -T git@github.com <span class="c1">#老密钥的ssh_key验证</span>
+</span></span><span class="line"><span class="cl">Hi Milo980412! You<span class="err">&#39;</span>ve successfully authenticated, but GitHub does not provide shell access.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">ssh -T git@vue.github.com <span class="c1">#新密钥的ssh_key验证</span>
+</span></span><span class="line"><span class="cl">Hi MiloReact! You<span class="err">&#39;</span>ve successfully authenticated, but GitHub does not provide shell access.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>⚠️注意：如果**[老密钥]<strong>没有验证成功，把</strong>[老密钥]**也执行一遍上述过程</p>
+<h4 id="15-git配置更改">1.5 Git配置更改</h4>
+<p>如果已经设置了全局，<strong>取消全局用户名和邮箱配置</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git config --global --unset user.name
+</span></span><span class="line"><span class="cl">git config --global --unset user.email
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-hugo和vuepress设置">2 Hugo和Vuepress设置</h3>
+<p>这边讲一下怎么在博客（本地仓库）使用我们配置好的两个SSH Key</p>
+<h4 id="21-重新设置git配置">2.1 重新设置Git配置</h4>
+<p><strong>设置全局用户名和邮箱配置</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git config --global user.name XXXX
+</span></span><span class="line"><span class="cl">git config --global user.email XXXX
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>例如</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git config --global user.name <span class="s2">&#34;Milo980412&#34;</span>
+</span></span><span class="line"><span class="cl">git config --global user.email XXX@XX.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>⚠️注意：1.5 Git配置更改 中如果全局设置没啥问题的 1.5中就不用更改了，这里也不用重新设置了</p>
+<h4 id="22-git命令push博客项目">2.2 Git命令push博客项目</h4>
+<p><strong>一般我们push更新Hugo博客内容的流程是</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 生成静态文件</span>
+</span></span><span class="line"><span class="cl">hugo --theme<span class="o">=</span>LoveIt --baseUrl<span class="o">=</span><span class="s2">&#34;https://wcmsues.github.io&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 进入生成的文件夹</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> public
+</span></span><span class="line"><span class="cl"><span class="c1"># 创建本地代码仓库</span>
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl"><span class="c1"># 将修改的文件保存到暂存区</span>
+</span></span><span class="line"><span class="cl">git add -A
+</span></span><span class="line"><span class="cl"><span class="c1"># 需要将文件提交到本地仓库</span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s1">&#39;deploy&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 推送代码，如果发布到 https://&lt;USERNAME&gt;.github.io</span>
+</span></span><span class="line"><span class="cl">git push -f git@github.com:wcmsues/wcmsues.github.io.git master
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>一般我们push更新Vuepress博客内容的流程是</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 生成静态文件</span>
+</span></span><span class="line"><span class="cl">npm run docs:build
+</span></span><span class="line"><span class="cl"><span class="c1"># 进入生成的文件夹</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> docs/.vuepress/dist
+</span></span><span class="line"><span class="cl"><span class="c1"># 创建本地代码仓库</span>
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl"><span class="c1"># 将修改的文件保存到暂存区</span>
+</span></span><span class="line"><span class="cl">git add -A
+</span></span><span class="line"><span class="cl"><span class="c1"># 需要将文件提交到本地仓库</span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s1">&#39;deploy&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 如果发布到 https://&lt;USERNAME&gt;.github.io</span>
+</span></span><span class="line"><span class="cl">git push -f git@github.com:MiloReact/MiloReact.github.io.git master
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>⚠️注意：**[老密钥]<strong>的push没有区别，但是</strong>[新密钥]**的push有一点不同</p>
+<p>这里我的vuepress是我的**[新密钥]<strong>，在git push时，git地址要写我们在</strong>1.2 配置两个密钥**时带有前缀的vue.github.com，如下所示</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git push -f git@vue.github.com:MiloReact/MiloReact.github.io.git master
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>谁是新密钥就改谁的push命令就行，到此为止就解决了一台电脑实现多个Github账号发布博客</p>
+<h4 id="23-小建议">2.3 小建议</h4>
+<p>我不太喜欢用自动化部署，我喜欢用脚本，比如我在博客项目根目录创建一个deploy.sh文件，命令如下</p>
+<p>Hugo</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 生成静态文件</span>
+</span></span><span class="line"><span class="cl">hugo --theme<span class="o">=</span>LoveIt --baseUrl<span class="o">=</span><span class="s2">&#34;https://wcmsues.github.io&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 进入生成的文件夹</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> public
+</span></span><span class="line"><span class="cl"><span class="c1"># 创建本地代码仓库</span>
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl"><span class="c1"># 将修改的文件保存到暂存区</span>
+</span></span><span class="line"><span class="cl">git add -A
+</span></span><span class="line"><span class="cl"><span class="c1"># 需要将文件提交到本地仓库</span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s1">&#39;deploy&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 推送代码，如果发布到 https://&lt;USERNAME&gt;.github.io</span>
+</span></span><span class="line"><span class="cl">git push -f git@github.com:wcmsues/wcmsues.github.io.git master
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Vuepress</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 生成静态文件</span>
+</span></span><span class="line"><span class="cl">npm run docs:build
+</span></span><span class="line"><span class="cl"><span class="c1"># 进入生成的文件夹</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> docs/.vuepress/dist
+</span></span><span class="line"><span class="cl"><span class="c1"># 创建本地代码仓库</span>
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl"><span class="c1"># 将修改的文件保存到暂存区</span>
+</span></span><span class="line"><span class="cl">git add -A
+</span></span><span class="line"><span class="cl"><span class="c1"># 需要将文件提交到本地仓库</span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s1">&#39;deploy&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 如果发布到 https://&lt;USERNAME&gt;.github.io</span>
+</span></span><span class="line"><span class="cl">git push -f git@vue.github.com:MiloReact/MiloReact.github.io.git master
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>执行脚本完成push更新</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">./deploy.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-06-10</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/mac%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7%E5%8F%91%E5%B8%83%E5%A4%9A%E4%B8%AA%E5%8D%9A%E5%AE%A2/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/github-pages/">Github Pages</a>,&nbsp;<a href="/tags/git/">Git</a>,&nbsp;<a href="/tags/hugo/">Hugo</a>,&nbsp;<a href="/tags/vuepress/">Vuepress</a>,&nbsp;<a href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/npm%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" class="prev" rel="prev" title="npm基本命令"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>npm基本命令</a>
+            <a href="/react%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/" class="next" rel="next" title="React从入门到精通">React从入门到精通<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Milo</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+                    <span class="icp"><a href='https://icp.gov.moe/?keyword=20220907' target='_blank'>萌ICP备20220907号</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{"valine":{"appId":"mA5f3eaitvM7L2ju1lSv6eMv-9Nh9j0Va","appKey":"qt9jwVRbCP0KMK1VpCrOhF1N","avatar":"robohash","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"en","pageSize":10,"placeholder":"Your comment ...","recordIP":true,"visitor":true}},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"},"twemoji":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

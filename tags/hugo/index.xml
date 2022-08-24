@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Hugo - Tag - Milo&#39;s Blog</title>
+        <link>https://wcmsues.github.io/tags/hugo/</link>
+        <description>Hugo - Tag - Milo&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wcmsues@163.com (Milo)</managingEditor>
+            <webMaster>wcmsues@163.com (Milo)</webMaster><lastBuildDate>Thu, 11 Aug 2022 13:45:43 &#43;0800</lastBuildDate><atom:link href="https://wcmsues.github.io/tags/hugo/" rel="self" type="application/rss+xml" /><item>
+    <title>基于Hugo&#43;Github搭建个人博客</title>
+    <link>https://wcmsues.github.io/hugo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+    <pubDate>Thu, 11 Aug 2022 13:45:43 &#43;0800</pubDate>
+    <author>Milo</author>
+    <guid>https://wcmsues.github.io/hugo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+    <description><![CDATA[基于Hugo+Github搭建个人博客 一、安装 对于 Windows 平台，一般是一个zip文件，解压后里面有个 hugo.exe 文件。将该文件所在目录添加到环境变量 path 里，即]]></description>
+</item>
+<item>
+    <title>解决一台电脑实现多个Github账号发布博客</title>
+    <link>https://wcmsues.github.io/mac%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7%E5%8F%91%E5%B8%83%E5%A4%9A%E4%B8%AA%E5%8D%9A%E5%AE%A2/</link>
+    <pubDate>Fri, 10 Jun 2022 10:48:43 &#43;0800</pubDate>
+    <author>Milo</author>
+    <guid>https://wcmsues.github.io/mac%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7%E5%8F%91%E5%B8%83%E5%A4%9A%E4%B8%AA%E5%8D%9A%E5%AE%A2/</guid>
+    <description><![CDATA[解决一台电脑实现多个Github账号发布博客 Milo之前在自己的GitHub Pages 搭建 Hugo 静态博客网站，Hugo写博客挺好，但是放一些比较多的学习]]></description>
+</item>
+</channel>
+</rss>

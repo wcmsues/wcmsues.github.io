@@ -1,0 +1,40 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>工具 - Category - Milo&#39;s Blog</title>
+        <link>https://wcmsues.github.io/categories/%E5%B7%A5%E5%85%B7/</link>
+        <description>工具 - Category - Milo&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wcmsues@163.com (Milo)</managingEditor>
+            <webMaster>wcmsues@163.com (Milo)</webMaster><lastBuildDate>Wed, 06 Jul 2022 10:48:43 &#43;0800</lastBuildDate><atom:link href="https://wcmsues.github.io/categories/%E5%B7%A5%E5%85%B7/" rel="self" type="application/rss+xml" /><item>
+    <title>MacOS 使用 npm 安装 SASS 与使用教程</title>
+    <link>https://wcmsues.github.io/macos-%E4%BD%BF%E7%94%A8-npm-%E5%AE%89%E8%A3%85-sass-%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
+    <pubDate>Wed, 06 Jul 2022 10:48:43 &#43;0800</pubDate>
+    <author>Milo</author>
+    <guid>https://wcmsues.github.io/macos-%E4%BD%BF%E7%94%A8-npm-%E5%AE%89%E8%A3%85-sass-%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
+    <description><![CDATA[MacOS 使用 npm 安装 SASS 与使用教程 这里 Milo 使用 npm 来安装 sass 并使用，比较方便快捷 1 npm 的安装 首先确保你有node.js，才能使用npm npm是Node.js (opens]]></description>
+</item>
+<item>
+    <title>MacOS下HomBrew安装教程</title>
+    <link>https://wcmsues.github.io/macos%E4%B8%8Bhombrew%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</link>
+    <pubDate>Mon, 04 Jul 2022 13:45:43 &#43;0800</pubDate>
+    <author>Milo</author>
+    <guid>https://wcmsues.github.io/macos%E4%B8%8Bhombrew%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</guid>
+    <description><![CDATA[MacOS HomBrew 安装教程 完美解决方案 自动脚本(全部国内地址)（复制下面一句脚本到终端中粘贴回车) 苹果电脑 常规安装脚本（几分钟安装完成）： 1 /bin/zsh -c &#34;$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)&#34; MacOS 打]]></description>
+</item>
+<item>
+    <title>npm基本命令</title>
+    <link>https://wcmsues.github.io/npm%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</link>
+    <pubDate>Thu, 09 Jun 2022 09:48:43 &#43;0800</pubDate>
+    <author>Milo</author>
+    <guid>https://wcmsues.github.io/npm%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</guid>
+    <description><![CDATA[NPM是什么？ 它是一个命令行工具，npm已经被全球超过1100万开发人员所依赖，- 拥有超过一百万个软件包，是世界上最大的软件注册表。也可以形]]></description>
+</item>
+<item>
+    <title>Git基本命令</title>
+    <link>https://wcmsues.github.io/git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
+    <pubDate>Mon, 06 Jun 2022 13:45:43 &#43;0800</pubDate>
+    <author>Milo</author>
+    <guid>https://wcmsues.github.io/git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
+    <description><![CDATA[Quote 笔记来源 小丞前端日记 引言 Git 作为目前最强大的代码管理工具，相信大家都很熟悉了。它在我们的日常工作中起着至关重要的作用，我们可以用它来实现多人]]></description>
+</item>
+</channel>
+</rss>

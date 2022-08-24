@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>从零搭建基于VuePress的文档博客 - Milo&#39;s Blog</title><meta name="Description" content="从零搭建基于VuePress的文档博客"><meta property="og:title" content="从零搭建基于VuePress的文档博客" />
+<meta property="og:description" content="从零搭建基于VuePress的文档博客" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wcmsues.github.io/%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Evuepress%E7%9A%84%E6%96%87%E6%A1%A3%E5%8D%9A%E5%AE%A2/" /><meta property="og:image" content="https://wcmsues.github.io/47"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-10T13:45:43+08:00" />
+<meta property="article:modified_time" content="2022-08-10T13:45:43+08:00" /><meta property="og:site_name" content="Milo&#39;s Blog" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://wcmsues.github.io/47"/>
+
+<meta name="twitter:title" content="从零搭建基于VuePress的文档博客"/>
+<meta name="twitter:description" content="从零搭建基于VuePress的文档博客"/>
+<meta name="application-name" content="Milo&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Milo&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/aniya.webp"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://wcmsues.github.io/%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Evuepress%E7%9A%84%E6%96%87%E6%A1%A3%E5%8D%9A%E5%AE%A2/" /><link rel="prev" href="https://wcmsues.github.io/ssh-key%E5%AF%86%E9%92%A5%E7%9A%84%E5%88%9B%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/" /><link rel="next" href="https://wcmsues.github.io/hugo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "从零搭建基于VuePress的文档博客",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/wcmsues.github.io\/%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Evuepress%E7%9A%84%E6%96%87%E6%A1%A3%E5%8D%9A%E5%AE%A2\/"
+        },"genre": "posts","keywords": "Vuepress, markdown, 博客","wordcount":  2115 ,
+        "url": "https:\/\/wcmsues.github.io\/%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Evuepress%E7%9A%84%E6%96%87%E6%A1%A3%E5%8D%9A%E5%AE%A2\/","datePublished": "2022-08-10T13:45:43+08:00","dateModified": "2022-08-10T13:45:43+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Milo"
+            },"description": "从零搭建基于VuePress的文档博客"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <a href="https://github.com/wcmsues" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="3.5rem" height="3.5rem" viewBox="0 0 250 250" style="fill:#454648; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+        <div class="header-title">
+            <a href="/" title="Milo&#39;s Blog"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Milo&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="https://miloreact.github.io/" rel="noopener noreffer" target="_blank"> 前端开发 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/wcmsues" rel="noopener noreffer" target="_blank"><i class='fab fa-github'></i>  </a><a class="menu-item" href="/donate/"> 赞赏 </a><a class="menu-item" href="/friends/"><i class='fas fa-fw fa-fan fa-spin'></i> 友链 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Milo&#39;s Blog"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Milo&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="https://miloreact.github.io/" title="" rel="noopener noreffer" target="_blank">前端开发</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/wcmsues" title="" rel="noopener noreffer" target="_blank"><i class='fab fa-github'></i></a><a class="menu-item" href="/donate/" title="">赞赏</a><a class="menu-item" href="/friends/" title=""><i class='fas fa-fw fa-fan fa-spin'></i>友链</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">从零搭建基于VuePress的文档博客</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Milo</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>技术</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-08-10">2022-08-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2115 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;<span id="/%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Evuepress%E7%9A%84%E6%96%87%E6%A1%A3%E5%8D%9A%E5%AE%A2/" class="leancloud_visitors" data-flag-title="从零搭建基于VuePress的文档博客">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#一前提条件">一、前提条件</a></li>
+    <li><a href="#二快速上手">二、快速上手</a>
+      <ul>
+        <li><a href="#1创建并进入一个新目录">1.创建并进入一个新目录</a></li>
+        <li><a href="#2使用你喜欢的包管理器进行初始化">2.使用你喜欢的包管理器进行初始化</a></li>
+        <li><a href="#3将-vuepress-安装为本地依赖">3.将 VuePress 安装为本地依赖</a></li>
+        <li><a href="#4创建docs文件夹和一篇md文档">4.创建docs文件夹，和一篇md文档</a></li>
+        <li><a href="#5在-packagejson-中添加一些-scripts">5.在 <code>package.json</code> 中添加一些 <code>scripts</code></a></li>
+        <li><a href="#6在本地启动服务器">6.在本地启动服务器</a></li>
+      </ul>
+    </li>
+    <li><a href="#三基本设置">三、基本设置</a>
+      <ul>
+        <li><a href="#1目录结构设置">1.目录结构设置</a></li>
+        <li><a href="#2public静态资源目录">2.public静态资源目录</a></li>
+        <li><a href="#3重写默认颜色常量">3.重写默认颜色常量</a></li>
+        <li><a href="#4config基本设置">4.config基本设置</a></li>
+        <li><a href="#5首页设置">5.首页设置</a></li>
+      </ul>
+    </li>
+    <li><a href="#四pages存放markdown文档">四、pages存放markdown文档</a></li>
+    <li><a href="#五导航栏设置">五、导航栏设置</a></li>
+    <li><a href="#六侧边栏设置">六、侧边栏设置</a></li>
+    <li><a href="#七总结">七、总结</a></li>
+    <li><a href="#其他案例">其他案例</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="从零搭建基于vuepress的文档博客">从零搭建基于VuePress的文档博客</h1>
+<p>本文会帮助你从头搭建一个简单的 VuePress 文档，并且做一些简单的配置。</p>
+<h2 id="一前提条件">一、前提条件</h2>
+<p>VuePress 需要 <a href="https://nodejs.org/en/" target="_blank" rel="noopener noreffer ">Node.js</a> &gt;= 8.6</p>
+<img src="https://pic.jitudisk.com/public/2022/08/20/2b6b456a42da3.png" alt="nodejs.png" style="zoom: 33%;" /> 
+<p>直接点击下载，或者在DOWNLOADS里按需下载即可</p>
+<img src="https://pic.jitudisk.com/public/2022/08/20/dce2937529926.png" alt="WeChatb406d3e5ba4e311b520a3109d95ab6d6.png" style="zoom:33%;" /> 
+<p>安装好后，查看nodejs版本</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">node
+</span></span></code></pre></td></tr></table>
+</div>
+</div><img src="https://pic.jitudisk.com/public/2022/08/20/dd58be07deffa.png" alt="nodejsbanben.png" style="zoom:50%;" /> 
+<h2 id="二快速上手">二、快速上手</h2>
+<h3 id="1创建并进入一个新目录">1.创建并进入一个新目录</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">mkdir vuepress-milo <span class="o">&amp;&amp;</span> <span class="nb">cd</span> vuepress-milo
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2使用你喜欢的包管理器进行初始化">2.使用你喜欢的包管理器进行初始化</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">yarn init <span class="c1"># npm init</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>初始化过程如无特殊需要，一路回车即可</p>
+<img src="https://pic.jitudisk.com/public/2022/08/20/f9c5a1ab6951a.png" alt="chushihua.png" style="zoom: 50%;" /> 
+<h3 id="3将-vuepress-安装为本地依赖">3.将 VuePress 安装为本地依赖</h3>
+<p>不再推荐全局安装 VuePress</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">yarn add -D vuepress <span class="c1"># npm install -D vuepress</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="4创建docs文件夹和一篇md文档">4.创建docs文件夹，和一篇md文档</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">mkdir docs <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s1">&#39;# Hello VuePress&#39;</span> &gt; docs/README.md
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="5在-packagejson-中添加一些-scripts">5.在 <code>package.json</code> 中添加一些 <code>scripts</code></h3>
+<p>这里推荐用vscode打开后编辑</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">code .
+</span></span></code></pre></td></tr></table>
+</div>
+</div><img src="https://pic.jitudisk.com/public/2022/08/20/21da3354667a8.png" alt="tianjiasp.png" style="zoom:50%;" /> 
+<p>这一步骤是可选的，但我们推荐你完成它。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;docs:dev&#34;</span><span class="p">:</span> <span class="s2">&#34;vuepress dev docs&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;docs:build&#34;</span><span class="p">:</span> <span class="s2">&#34;vuepress build docs&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="6在本地启动服务器">6.在本地启动服务器</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">yarn docs:dev <span class="c1"># npm run docs:dev</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><img src="https://pic.jitudisk.com/public/2022/08/20/67f9d52dd2e62.png" alt="qidongbendi.png" style="zoom:33%;" /> 
+<h2 id="三基本设置">三、基本设置</h2>
+<p>此时的文档博客很丑，下一步我们需要做一些基本配置</p>
+<h3 id="1目录结构设置">1.目录结构设置</h3>
+<p>VuePress 遵循 <strong>“约定优于配置”</strong> 的原则，推荐的目录结构如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">├── docs
+</span></span><span class="line"><span class="cl">│   ├── .vuepress
+</span></span><span class="line"><span class="cl">│   │   ├── public
+</span></span><span class="line"><span class="cl">│   │   ├── styles
+</span></span><span class="line"><span class="cl">│   │   │   └── palette.styl
+</span></span><span class="line"><span class="cl">│   │   └── config.js
+</span></span><span class="line"><span class="cl">│   ├── pages
+</span></span><span class="line"><span class="cl">│   └── README.md
+</span></span><span class="line"><span class="cl">│ 
+</span></span><span class="line"><span class="cl">└── package.json
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>⚠️建议：先把这些都创建好，然后在再写入内容</p>
+<img src="https://pic.jitudisk.com/public/2022/08/20/a1c120e3279e8.png" alt="mulujiegoutu.png" style="zoom: 50%;" /> 
+<h3 id="2public静态资源目录">2.public静态资源目录</h3>
+<p><code>docs/.vuepress/public</code>: 静态资源目录，这里我放了图片作为页面主图和偏爱图标</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://pic.jitudisk.com/public/2022/08/20/821c2bdf31883.png"
+        data-srcset="https://pic.jitudisk.com/public/2022/08/20/821c2bdf31883.png, https://pic.jitudisk.com/public/2022/08/20/821c2bdf31883.png 1.5x, https://pic.jitudisk.com/public/2022/08/20/821c2bdf31883.png 2x"
+        data-sizes="auto"
+        alt="https://pic.jitudisk.com/public/2022/08/20/821c2bdf31883.png"
+        title="aniya.png" /></p>
+<h3 id="3重写默认颜色常量">3.重写默认颜色常量</h3>
+<p><code>docs/.vuepress/styles/palette.styl</code>: 用于重写默认颜色常量，或者设置新的 stylus 颜色常量</p>
+<p>默认是绿色，我这里更改为蓝色</p>
+<p>默认页面有点窄，这里更改为900px宽度</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-stylus" data-lang="stylus"><span class="line"><span class="cl"><span class="o">//</span> <span class="err">颜色</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$accentColor</span> <span class="o">=</span> <span class="mh">#235DC8</span>
+</span></span><span class="line"><span class="cl"><span class="o">//</span> <span class="err">页面设置</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">page</span> <span class="p">.</span><span class="nc">theme-default-content</span><span class="p">:</span><span class="nd">not</span><span class="p">(.</span><span class="nc">custom</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="py">max-width</span><span class="p">:</span> <span class="err">900px</span><span class="nv">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="4config基本设置">4.config基本设置</h3>
+<p><code>docs/.vuepress/config.js</code>: 配置文件的入口文件，也可以是 <code>YML</code> 或 <code>toml</code>，这里简单设置了网站标题、网站描述、偏爱图标。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 网站标题
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;Milo的学习笔记&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 网站描述
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">description</span><span class="o">:</span> <span class="s1">&#39;拒绝重复造轮子&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 偏爱图标
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">head</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="p">[</span><span class="s1">&#39;link&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">rel</span><span class="o">:</span> <span class="s1">&#39;icon&#39;</span><span class="p">,</span> <span class="nx">href</span><span class="o">:</span> <span class="s1">&#39;/aniya.png&#39;</span> <span class="p">}]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="5首页设置">5.首页设置</h3>
+<p>默认的主题提供了一个首页（Homepage）的布局，需要在你的根级 <code>README.md</code> 指定 <code>home: true</code>。以下是一个如何使用的例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">home: true
+</span></span><span class="line"><span class="cl">heroImage: /aniya.webp
+</span></span><span class="line"><span class="cl">heroText: Milo的学习笔记
+</span></span><span class="line"><span class="cl">tagline: 无比热爱，来日方长！
+</span></span><span class="line"><span class="cl">actionText: Milo的周记 →
+</span></span><span class="line"><span class="cl">actionLink: /
+</span></span><span class="line"><span class="cl">features:
+</span></span><span class="line"><span class="cl"><span class="k">-</span> title: 科研之路
+</span></span><span class="line"><span class="cl">  details: 主攻推荐系统、知识图谱，拒绝重复造轮
+</span></span><span class="line"><span class="cl"><span class="k">-</span> title: 目前现状
+</span></span><span class="line"><span class="cl">  details: 目前在读研二，本科和研究生都就读于上海工程技术大学，论文撰写中。
+</span></span><span class="line"><span class="cl"><span class="k">-</span> title: 短期规划
+</span></span><span class="line"><span class="cl">  details: 完成毕业论文，发表两篇中文核心。
+</span></span><span class="line"><span class="cl"><span class="gh"># footer: MIT Licensed | Copyright © 2018-present Evan You
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>---
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后重新启动本地服务</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">yarn docs:dev
+</span></span></code></pre></td></tr></table>
+</div>
+</div><img src="https://pic.jitudisk.com/public/2022/08/20/3f08802c9184f.png" alt="jibenshezhi.png"  />
+<h2 id="四pages存放markdown文档">四、pages存放markdown文档</h2>
+<p><code>docs/pages</code> 用于存放markdown文件，例如pages中有以下几个md文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">└── pages
+</span></span><span class="line"><span class="cl">    ├── codes
+</span></span><span class="line"><span class="cl">    ├── papers
+</span></span><span class="line"><span class="cl">    │   ├── kg
+</span></span><span class="line"><span class="cl">    │   ├── rs
+</span></span><span class="line"><span class="cl">    │   └── rskg
+</span></span><span class="line"><span class="cl">    │       ├── AKGE.md
+</span></span><span class="line"><span class="cl">    │       ├── DKN.md
+</span></span><span class="line"><span class="cl">    │       ├── KGAT.md
+</span></span><span class="line"><span class="cl">    │       ├── KGCN.md
+</span></span><span class="line"><span class="cl">    │       ├── KGNN-LS.md
+</span></span><span class="line"><span class="cl">    │       ├── MKR.md
+</span></span><span class="line"><span class="cl">    │       ├── NGCF.md
+</span></span><span class="line"><span class="cl">    │       ├── RippleNet.md
+</span></span><span class="line"><span class="cl">    │       └── start.md
+</span></span><span class="line"><span class="cl">    └── weekly
+</span></span><span class="line"><span class="cl">        ├── 20220822.md
+</span></span><span class="line"><span class="cl">        └── start.md
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="五导航栏设置">五、导航栏设置</h2>
+<p>在 <code>docs/.vuepress/config.js</code> 基本设置的基础上，添加导航栏设置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 网站标题
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 网站描述
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 偏爱图标
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 导航栏与侧边栏设置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">themeConfig</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// logo设置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">logo</span><span class="o">:</span> <span class="s1">&#39;/aniya.png&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 导航栏设置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">nav</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span> <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;首页&#39;</span><span class="p">,</span> <span class="nx">link</span><span class="o">:</span> <span class="s1">&#39;/&#39;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;推荐系统&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">ariaLabel</span><span class="o">:</span> <span class="s1">&#39;recommender systems&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">items</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">{</span> <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;基础知识&#39;</span><span class="p">,</span> <span class="nx">link</span><span class="o">:</span> <span class="s1">&#39;/&#39;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                <span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;知识图谱&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">ariaLabel</span><span class="o">:</span> <span class="s1">&#39;knowledge graph&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">items</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">{</span> <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;基础知识&#39;</span><span class="p">,</span> <span class="nx">link</span><span class="o">:</span> <span class="s1">&#39;/&#39;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                <span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;相关论文&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">ariaLabel</span><span class="o">:</span> <span class="s1">&#39;papers&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">items</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">{</span> <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;论文学习&#39;</span><span class="p">,</span> <span class="nx">link</span><span class="o">:</span> <span class="s1">&#39;/pages/papers/rskg/start.md&#39;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">{</span> <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;源码学习&#39;</span><span class="p">,</span> <span class="nx">link</span><span class="o">:</span> <span class="s1">&#39;/&#39;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                <span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;我的论文&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">ariaLabel</span><span class="o">:</span> <span class="s1">&#39;mypaper&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">items</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">{</span> <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;论文1&#39;</span><span class="p">,</span> <span class="nx">link</span><span class="o">:</span> <span class="s1">&#39;/&#39;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">{</span> <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;论文2&#39;</span><span class="p">,</span> <span class="nx">link</span><span class="o">:</span> <span class="s1">&#39;/&#39;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">{</span> <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;论文3&#39;</span><span class="p">,</span> <span class="nx">link</span><span class="o">:</span> <span class="s1">&#39;/&#39;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                <span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//侧边栏设置（后面讲）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后重新启动本地服务</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">yarn docs:dev
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://pic.jitudisk.com/public/2022/08/20/d1898c76fbe77.png"
+        data-srcset="https://pic.jitudisk.com/public/2022/08/20/d1898c76fbe77.png, https://pic.jitudisk.com/public/2022/08/20/d1898c76fbe77.png 1.5x, https://pic.jitudisk.com/public/2022/08/20/d1898c76fbe77.png 2x"
+        data-sizes="auto"
+        alt="https://pic.jitudisk.com/public/2022/08/20/d1898c76fbe77.png"
+        title="daohanglan.png" /></p>
+<h2 id="六侧边栏设置">六、侧边栏设置</h2>
+<p>在 <code>docs/.vuepress/config.js</code> 基本设置与导航栏设置的基础上，添加侧边栏设置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 网站标题
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 网站描述
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 偏爱图标
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 导航栏与侧边栏设置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">themeConfig</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// logo设置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">logo</span><span class="o">:</span> <span class="s1">&#39;/aniya.png&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 导航栏设置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// 侧边栏设置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">sidebar</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 周报
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="s1">&#39;/pages/weekly/&#39;</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">                <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;Milo的学习周报&#39;</span><span class="p">,</span>   <span class="c1">// 必要的
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                        <span class="nx">collapsable</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// 是否可折叠, 默认值是 true,
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                        <span class="nx">sidebarDepth</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>    <span class="c1">// 侧边栏深度, 默认值是1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                        <span class="nx">children</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                            <span class="s1">&#39;start&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                            <span class="s1">&#39;20220822&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">]</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                <span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 推荐系统&amp;&amp;知识图谱
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="s1">&#39;/pages/papers/&#39;</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">                <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;推荐系统&amp;&amp;知识图谱&#39;</span><span class="p">,</span>   <span class="c1">// 必要的
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                        <span class="nx">collapsable</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// 是否可折叠, 默认值是 true,
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                        <span class="nx">sidebarDepth</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>    <span class="c1">// 侧边栏深度, 默认值是 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                        <span class="nx">children</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                            <span class="s1">&#39;rskg/start&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                            <span class="s1">&#39;rskg/DKN&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                            <span class="s1">&#39;rskg/RippleNet&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                            <span class="s1">&#39;rskg/MKR&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                            <span class="s1">&#39;rskg/KGCN&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                            <span class="s1">&#39;rskg/KGNN-LS&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                            <span class="s1">&#39;rskg/NGCF&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                            <span class="s1">&#39;rskg/AKGE&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                            <span class="s1">&#39;rskg/KGAT&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">]</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;知识图谱&#39;</span><span class="p">,</span>   <span class="c1">// 必要的
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                        <span class="nx">collapsable</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// 是否可折叠, 默认值是 true,
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                        <span class="nx">sidebarDepth</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>    <span class="c1">// 侧边栏深度, 默认值是 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                        <span class="nx">children</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                            
+</span></span><span class="line"><span class="cl">                        <span class="p">]</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;推荐系统&#39;</span><span class="p">,</span>   <span class="c1">// 必要的
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                        <span class="nx">collapsable</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// 是否可折叠, 默认值是 true,
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                        <span class="nx">sidebarDepth</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>    <span class="c1">// 侧边栏深度, 默认值是 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                        <span class="nx">children</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                
+</span></span><span class="line"><span class="cl">                        <span class="p">]</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                <span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后重新启动本地服务</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">yarn docs:dev
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://pic.jitudisk.com/public/2022/08/20/7de435608514d.png"
+        data-srcset="https://pic.jitudisk.com/public/2022/08/20/7de435608514d.png, https://pic.jitudisk.com/public/2022/08/20/7de435608514d.png 1.5x, https://pic.jitudisk.com/public/2022/08/20/7de435608514d.png 2x"
+        data-sizes="auto"
+        alt="https://pic.jitudisk.com/public/2022/08/20/7de435608514d.png"
+        title="cebianlan.png" /></p>
+<h2 id="七总结">七、总结</h2>
+<ol>
+<li>安装nodejs</li>
+<li>创建并进入一个新目录</li>
+<li>使用你喜欢的包管理器进行初始化</li>
+<li>将 VuePress 安装为本地依赖</li>
+<li>创建docs文件夹，和一篇md文档</li>
+<li>在 <code>package.json</code> 中添加一些 <code>scripts</code></li>
+<li>目录结构设置</li>
+<li>public静态资源目录</li>
+<li>重写默认颜色常量</li>
+<li>config基本设置</li>
+<li>首页设置</li>
+<li>pages存放markdown文档</li>
+<li>导航栏设置</li>
+<li>侧边栏设置</li>
+</ol>
+<p>自此所有基本操作都已完成，大家可根据此文章搭建属于自己的文档博客</p>
+<h2 id="其他案例">其他案例</h2>
+<p><a href="https://miloreact.github.io/" target="_blank" rel="noopener noreffer ">Milo的前端日记</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-08-10</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Evuepress%E7%9A%84%E6%96%87%E6%A1%A3%E5%8D%9A%E5%AE%A2/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/vuepress/">Vuepress</a>,&nbsp;<a href="/tags/markdown/">markdown</a>,&nbsp;<a href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/ssh-key%E5%AF%86%E9%92%A5%E7%9A%84%E5%88%9B%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/" class="prev" rel="prev" title="SSH key密钥的创建与配置"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>SSH key密钥的创建与配置</a>
+            <a href="/hugo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="next" rel="next" title="基于Hugo&#43;Github搭建个人博客">基于Hugo+Github搭建个人博客<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Milo</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+                    <span class="icp"><a href='https://icp.gov.moe/?keyword=20220907' target='_blank'>萌ICP备20220907号</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{"valine":{"appId":"mA5f3eaitvM7L2ju1lSv6eMv-9Nh9j0Va","appKey":"qt9jwVRbCP0KMK1VpCrOhF1N","avatar":"robohash","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"en","pageSize":10,"placeholder":"Your comment ...","recordIP":true,"visitor":true}},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"},"twemoji":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

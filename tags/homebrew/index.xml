@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>homebrew - Tag - Milo&#39;s Blog</title>
+        <link>https://wcmsues.github.io/tags/homebrew/</link>
+        <description>homebrew - Tag - Milo&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wcmsues@163.com (Milo)</managingEditor>
+            <webMaster>wcmsues@163.com (Milo)</webMaster><lastBuildDate>Thu, 07 Jul 2022 13:45:43 &#43;0800</lastBuildDate><atom:link href="https://wcmsues.github.io/tags/homebrew/" rel="self" type="application/rss+xml" /><item>
+    <title>MacOS如何生成目录树？</title>
+    <link>https://wcmsues.github.io/macos%E5%A6%82%E4%BD%95%E7%94%9F%E6%88%90%E7%9B%AE%E5%BD%95%E6%A0%91/</link>
+    <pubDate>Thu, 07 Jul 2022 13:45:43 &#43;0800</pubDate>
+    <author>Milo</author>
+    <guid>https://wcmsues.github.io/macos%E5%A6%82%E4%BD%95%E7%94%9F%E6%88%90%E7%9B%AE%E5%BD%95%E6%A0%91/</guid>
+    <description><![CDATA[MacOS如何生成目录树？ 在一个项目的 README 中，我们往往会想把项目的目录结构进行一下介绍或者注释，这样方便其他人接手项目时快速熟悉，同时也方便自]]></description>
+</item>
+<item>
+    <title>MacOS下HomBrew安装教程</title>
+    <link>https://wcmsues.github.io/macos%E4%B8%8Bhombrew%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</link>
+    <pubDate>Mon, 04 Jul 2022 13:45:43 &#43;0800</pubDate>
+    <author>Milo</author>
+    <guid>https://wcmsues.github.io/macos%E4%B8%8Bhombrew%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</guid>
+    <description><![CDATA[MacOS HomBrew 安装教程 完美解决方案 自动脚本(全部国内地址)（复制下面一句脚本到终端中粘贴回车) 苹果电脑 常规安装脚本（几分钟安装完成）： 1 /bin/zsh -c &#34;$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)&#34; MacOS 打]]></description>
+</item>
+</channel>
+</rss>
