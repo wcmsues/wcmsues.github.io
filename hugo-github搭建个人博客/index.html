@@ -28,7 +28,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/wcmsues.github.io\/hugo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2\/"
-        },"genre": "posts","keywords": "Hugo, Github Pages, Github, 博客","wordcount":  2433 ,
+        },"genre": "posts","keywords": "Hugo, Github Pages, Github, 博客","wordcount":  2343 ,
         "url": "https:\/\/wcmsues.github.io\/hugo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2\/","datePublished": "2022-08-11T13:45:43+08:00","dateModified": "2022-08-11T13:45:43+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -104,7 +104,7 @@
             <div class="toc-content always-active" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">基于Hugo+Github搭建个人博客</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Milo</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>技术</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-08-11">2022-08-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2433 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-08-11">2022-08-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2343 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;<span id="/hugo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="leancloud_visitors" data-flag-title="基于Hugo&#43;Github搭建个人博客">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
@@ -547,7 +547,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="3-部署到github-pages">3 部署到Github Pages</h3>
-<p>第一次发布，执行下方脚本</p>
+<p>执行下方脚本</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -564,42 +564,13 @@
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
+</span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 生成静态文件</span>
-</span></span><span class="line"><span class="cl">hugo --theme<span class="o">=</span>LoveIt --baseUrl<span class="o">=</span><span class="s2">&#34;https://wcmsues.github.io&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 进入生成的文件夹</span>
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> public
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 确保脚本抛出遇到的错误</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> -e
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 基本操作</span>
-</span></span><span class="line"><span class="cl">git init
-</span></span><span class="line"><span class="cl">git add .
-</span></span><span class="line"><span class="cl">git commit -m <span class="s1">&#39;firstcommit&#39;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#只在第一次部署时运行</span>
-</span></span><span class="line"><span class="cl">git remote add origin git@github.com:wcmsues/wcmsues.github.io.git
-</span></span><span class="line"><span class="cl"><span class="c1"># 发布只在第一次部署时带-u</span>
-</span></span><span class="line"><span class="cl">git push -u origin master
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>从第二次发布开始，执行下方脚本即可</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># 生成静态文件</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 生成静态文件</span>
 </span></span><span class="line"><span class="cl">hugo --theme<span class="o">=</span>LoveIt --baseUrl<span class="o">=</span><span class="s2">&#34;https://wcmsues.github.io&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># 进入生成的文件夹</span>
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> public

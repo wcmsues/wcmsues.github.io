@@ -283,28 +283,12 @@ Hi wcmsues! You've successfully authenticated, but GitHub does not provide shell
 
 ### 3 部署到Github Pages
 
-第一次发布，执行下方脚本
+执行下方脚本
 
 ```sh
-# 生成静态文件
-hugo --theme=LoveIt --baseUrl="https://wcmsues.github.io"
-# 进入生成的文件夹
-cd public
+# 确保脚本抛出遇到的错误
+set -e
 
-# 基本操作
-git init
-git add .
-git commit -m 'firstcommit'
-
-#只在第一次部署时运行
-git remote add origin git@github.com:wcmsues/wcmsues.github.io.git
-# 发布只在第一次部署时带-u
-git push -u origin master
-```
-
-从第二次发布开始，执行下方脚本即可
-
-```sh
 # 生成静态文件
 hugo --theme=LoveIt --baseUrl="https://wcmsues.github.io"
 # 进入生成的文件夹
