@@ -311,5 +311,7 @@ git push git@github.com:wcmsues/wcmsues.github.io.git master
 
 最终我的基于Hugo+Github搭建的个人博客：[Milo's Blog](https://wcmsues.github.io/)
 
+![WeChat4bdb457ca241484e57306164ace39274.png](https://pic.jitudisk.com/public/2022/08/26/82baa2768132c.png)
+
 慢慢美化配置好之后，就不用动了，我平时也就写写md文件，放到 `content/posts` 目录，开头加上 `front matter`，然后用脚本上传即可。
 
