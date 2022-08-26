@@ -162,8 +162,6 @@ hugo server -D
 
 在本地启动服务后可以在 http://localhost:1313/ 访问个人站点。该命令仅用于本地调试，支持热修改，也就是说在启动服务时修改文章会实时生效，但是该命令不会真正生成静态文件。
 
-![](https://hugoloveit.com/zh-cn/theme-documentation-basics/basic-configuration-preview.zh-cn.png) 
-
 ## 七、生成静态页面
 
 输入命令：
